@@ -24,8 +24,11 @@ def send_static(filename):
 
 @route('/')
 def sign_in():
-    cur.execute('SELECT * FROM USER')
-    users = cur.fetchall()
+    try:
+        cur.execute('SELECT * FROM USER')
+        users = cur.fetchall()
+    except (pymysql.InterfaceError):
+        pass
 
     notenda_listi = []
     for i, x in users:
@@ -33,8 +36,7 @@ def sign_in():
 
     if len(notenda_listi) == 0:
         cur.execute('INSERT INTO USER VALUES("kypler", "admin")')
-
-    return template('sign_in')
+    return template('sign_in.tpl')
 
 @route('/', method='POST')
 def sign_in_info():
