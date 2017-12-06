@@ -24,11 +24,8 @@ def send_static(filename):
 
 @route('/')
 def sign_in():
-    try:
-        cur.execute('SELECT * FROM USER')
-        users = cur.fetchall()
-    except pymysql.InterfaceError:
-        pass
+    cur.execute('SELECT * FROM USER')
+    users = cur.fetchall()
 
     notenda_listi = []
     for i, x in users:
