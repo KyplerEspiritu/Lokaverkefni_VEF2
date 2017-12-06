@@ -10,7 +10,7 @@ import pymysql
 db = pymysql.connect(host="tsuts.tskoli.is",
                      user="2910003120",
                      passwd="kypler00",
-                     db="2910003120_lokaverkvef2")
+                     db="2910003120_lokaverkvef12")
 
 
 cur = db.cursor()
@@ -24,11 +24,8 @@ def send_static(filename):
 
 @route('/')
 def sign_in():
-    try:
-        cur.execute('SELECT * FROM USER')
-        users = cur.fetchall()
-    except (pymysql.InterfaceError):
-        pass
+    cur.execute('SELECT * FROM USER')
+    users = cur.fetchall()
 
     notenda_listi = []
     for i, x in users:
@@ -119,4 +116,4 @@ def minar_sidur():
 
 
 
-run(host='0.0.0.0', port=argv[1], reloader=True, debug=True)
+run(host='localhost', port=8080, reloader=True, debug=True)
