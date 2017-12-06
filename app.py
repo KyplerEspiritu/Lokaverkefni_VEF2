@@ -36,6 +36,7 @@ def sign_in():
 
     if len(notenda_listi) == 0:
         cur.execute('INSERT INTO USER VALUES("kypler", "admin")')
+        db.commit()
     return template('sign_in.tpl')
 
 @route('/', method='POST')
