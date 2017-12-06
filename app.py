@@ -102,11 +102,8 @@ def panta():
 def panta_info():
     texti = request.forms.get('comment')
 
-    try:
-        cur.execute('INSERT INTO ORDERS VALUES(%s, %s)', (signinUser, texti))
-        db.commit()
-    except (pymysql.IntegrityError):
-        pass
+    cur.execute('INSERT INTO ORDERS VALUES(%s, %s)', (signinUser, texti))
+    db.commit()
     redirect('/heimasida')
 
 @route('/minar')
