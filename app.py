@@ -34,7 +34,7 @@ def sign_in():
     if len(notenda_listi) == 0:
         cur.execute('INSERT INTO USER VALUES("kypler", "admin")')
 
-    return template('sign_in.tpl')
+    return template('sign_in')
 
 @route('/', method='POST')
 def sign_in_info():
@@ -57,12 +57,12 @@ def sign_in_info():
             redirect('/heimasida')
             break
     else:
-        return template('sign_in_error.tpl', message="Innskráning hefur ekki staðist")
+        return template('sign_in_error', message="Innskráning hefur ekki staðist")
 
 
 @route('/signup')
 def sign_up():
-    return template('sign_up.tpl')
+    return template('sign_up')
 
 @route('/signup', method="POST")
 def sign_up_info():
@@ -89,11 +89,11 @@ def sign_up_info():
 @route('/heimasida')
 def heimasida():
 
-    return template('heimasida.tpl')
+    return template('heimasida')
 
 @route('/panta')
 def panta():
-    return template('to_do.tpl')
+    return template('to_do')
 
 @route('/panta', method="POST")
 def panta_info():
@@ -112,7 +112,7 @@ def minar_sidur():
     for i, x in orders:
         listi.append([i, x.encode('latin-1').decode('utf-8')])
 
-    return template('minar_sidur.tpl', data=listi, nafn=signinUser)
+    return template('minar_sidur', data=listi, nafn=signinUser)
 
 
 
