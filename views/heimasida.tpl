@@ -13,7 +13,7 @@
 		<nav>
 			<div class="first_last">
 				<div class="first">
-					<img class="logo" src="http://diylogodesigns.com/blog/wp-content/uploads/2016/06/Nasa-Logo-Transparent-Background-download.png">
+					<img class="logo" src="/static/img/logo.png">
 				</div>
 				<div class="mid">
 					<div class="minar_sidur_takki">
