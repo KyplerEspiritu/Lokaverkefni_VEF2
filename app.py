@@ -15,7 +15,7 @@ db = pymysql.connect(host="tsuts.tskoli.is",
 
 cur = db.cursor()
 cur.execute('CREATE TABLE IF NOT EXISTS USER(username varchar(32) PRIMARY KEY, password varchar(32))')
-cur.execute('CREATE TABLE IF NOT EXISTS ORDERS(Username varchar(32), texti varchar(500) NOT NULL)')
+cur.execute('CREATE TABLE IF NOT EXISTS ORDERS(Username varchar(32), texti varchar(500))')
 
 
 @route('/static/<filename:path>')
