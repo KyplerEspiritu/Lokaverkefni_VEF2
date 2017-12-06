@@ -10,7 +10,7 @@ import pymysql
 db = pymysql.connect(host="tsuts.tskoli.is",
                      user="2910003120",
                      passwd="kypler00",
-                     db="2910003120_vef2lokaverk")
+                     db="2910003120_lokaverkvef2")
 
 
 cur = db.cursor()
