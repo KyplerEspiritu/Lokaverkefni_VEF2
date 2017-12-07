@@ -4,7 +4,7 @@
 
 
 from bottle import *
-from sys import argv
+from sys import *
 import pymysql
 
 db = pymysql.connect(host="tsuts.tskoli.is",
@@ -114,7 +114,7 @@ def minar_sidur():
 
     listi = []
     for i, x in orders:
-        listi.append([i, x]) #.encode('latin-1').decode('utf-8')
+        listi.append([i, x.encode('latin-1').decode('utf-8')])
 
     return template('minar_sidur', data=listi, nafn=signinUser)
 
