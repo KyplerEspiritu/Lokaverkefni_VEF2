@@ -11,7 +11,7 @@ C. Verkefnalýsing:
 	Vefsíðan er þannig að þú býrð til notenda og gerir to do lista. Svo þegar þú ert búinn að gera to do geturu séð allan listan aðeins hjá notendan sem þú ert skráður inn í.
 
 D. Tæknileg atriði:
-	Ég er með myndband inná INNU.
+	https://youtu.be/oGvcmLXyynw
 
 E. Verkaskipting:
 	Ég var að vinna aleinn, þannig ég gerði 100%.
